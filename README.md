@@ -37,7 +37,7 @@ Run the queries:
 
 
 node queries.js
-📂 Project Files
+## 📂 Project Files
 index.js → Creates the plp_bookstore database and books collection
 
 insert_books.js → Inserts sample book documents
@@ -46,7 +46,7 @@ queries.js → Contains MongoDB queries for CRUD, advanced queries, aggregation,
 
 screenshot.png → Proof of database and collection in MongoDB Compass/Atlas
 
-🔍 Example Queries
+## 🔍 Example Queries
 Some examples included in queries.js:
 
 javascript
@@ -61,11 +61,11 @@ db.books.updateOne({ title: "1984" }, { $set: { price: 15 } });
 
 // Delete a book by its title
 db.books.deleteOne({ title: "The Alchemist" });
-📊 Screenshot
+## 📊 Screenshot
 Below is a sample screenshot of the MongoDB Compass showing the database and collection:
 
 
-✅ Submission
+## ✅ Submission
 Commit all required files:
 
 setup.js
@@ -82,5 +82,9 @@ Push to your GitHub Classroom repository:
 
 
 git add .
+
+
 git commit -m "Completed Week 1 MongoDB assignment"
+
+
 git push origin main
