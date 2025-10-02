@@ -1,59 +1,172 @@
-# MongoDB Fundamentals - Week 1
+\# 📚 PLP Bookstore – MongoDB Assignment (Week 1)
 
-## Setup Instructions
 
-Before you begin this assignment, please make sure you have the following installed:
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+\## 🚀 Objective
 
-### Node.js Package Setup
+This project demonstrates MongoDB fundamentals, including:
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+\- Creating databases and collections  
 
-```bash
-# Initialize a package.json file
-npm init -y
+\- Performing CRUD operations  
 
-# Install the MongoDB Node.js driver
-npm install mongodb
-```
+\- Advanced queries with filtering, projection, sorting, and pagination  
 
-## Assignment Overview
+\- Aggregation pipelines  
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+\- Indexing for performance optimization  
 
-## Submission
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
 
-## Files Included
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+\## 🗄️ Setup
 
-## Requirements
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
 
-## Resources
+\### Requirements
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+\- Node.js (latest LTS version recommended)  
+
+\- MongoDB (Local or Atlas cluster)  
+
+\- MongoDB Shell (`mongosh`) or MongoDB Compass  
+
+
+
+\### Installation
+
+Clone this repository and install dependencies:
+
+
+
+git clone <your-repo-url>
+
+cd my-mongo-app
+
+npm install
+
+MongoDB Setup
+
+Run the setup script to create the database and collection:
+
+
+
+node index.js
+
+Populate the database with sample data:
+
+
+
+
+
+node insert\_books.js
+
+Run the queries:
+
+
+
+
+
+node queries.js
+
+📂 Project Files
+
+index.js → Creates the plp\_bookstore database and books collection
+
+
+
+insert\_books.js → Inserts sample book documents
+
+
+
+queries.js → Contains MongoDB queries for CRUD, advanced queries, aggregation, and indexing
+
+
+
+screenshot.png → Proof of database and collection in MongoDB Compass/Atlas
+
+
+
+🔍 Example Queries
+
+Some examples included in queries.js:
+
+
+
+javascript
+
+// Find all books in a specific genre
+
+db.books.find({ genre: "Fiction" });
+
+
+
+// Find books published after 2010
+
+db.books.find({ published\_year: { $gt: 2010 } });
+
+
+
+// Update price of a book
+
+db.books.updateOne({ title: "1984" }, { $set: { price: 15 } });
+
+
+
+// Delete a book by its title
+
+db.books.deleteOne({ title: "The Alchemist" });
+
+📊 Screenshot
+
+Below is a sample screenshot of the MongoDB Compass showing the database and collection:
+
+
+
+
+
+
+
+✅ Submission
+
+Commit all required files:
+
+
+
+setup.js
+
+
+
+insert\_books.js
+
+
+
+queries.js
+
+
+
+README.md
+
+
+
+screenshot.png
+
+
+
+Push to your GitHub Classroom repository:
+
+
+
+bash
+
+Copy code
+
+git add .
+
+git commit -m "Completed Week 1 MongoDB assignment"
+
+git push origin main
+
