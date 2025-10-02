@@ -160,9 +160,7 @@ Push to your GitHub Classroom repository:
 
 
 
-bash
 
-Copy code
 
 git add .
 
